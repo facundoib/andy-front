@@ -24,7 +24,7 @@ function App() {
     setMessage("")
     fetch("https://andy-botardo.netlify.app/.netlify/functions/api/tweet", requestOptions)
       .then(response => response.text())
-      .then(result => result == "OK" ? setNotif("Tweet enviado!") : setNotif("Ocurrió un error"))
+      .then(result => result === "OK" ? setNotif("Tweet enviado!") : setNotif("Ocurrió un error"))
       .catch(error => console.log('error', error))
   }
 
